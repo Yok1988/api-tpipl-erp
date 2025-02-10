@@ -1,0 +1,31 @@
+{
+    "info": {
+      "_postman_id": "d8b0bfc3-1234-5678-90ab-cdef12345678",
+      "name": "API.TPI.webplant",
+      "description": "Collection สำหรับทดสอบ API ที่ดึงข้อมูลจาก Sales",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Get sales",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://192.168.3.7:4000/sales-erp",
+            "protocol": "http",
+            "host": [
+              "192.168.3.7"
+            ],
+            "port": "4000",
+            "path": [
+              "sales-erp"
+            ]
+          }
+        },
+        "response": []
+      }
+      
+    ]
+  }
+  

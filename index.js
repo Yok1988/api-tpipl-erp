@@ -40,7 +40,7 @@ app.get("/sales-erp", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 4000;
 
 const os = require("os");
 function getLocalIP() {//การดึง IP เครื่องภายใน (Local IP)
