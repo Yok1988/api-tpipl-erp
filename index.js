@@ -29,8 +29,10 @@ sql.connect(config)
 app.get("/sales-erp", async (req, res) => {
   try {
     const result = await sql.query(`
-     SELECT  DPDate,DONo,SPONo,SO,CustNo,ShpCode,PlantNo,TrkNo
+    SELECT  DPDate,DONo,SPONo,SO,CustNo,ShpCode,PlantNo,TrkNo
     ,SaleType,ItemNo,Qty,Price,Discount,PictureFile,TextFile
+	  ,SUBSTRING(TextFile, 1, CHARINDEX('.txt', TextFile) - 1) AS TxtFile
+	  ,'http://eservice.tpipolene.co.th/webplant/DataFiles/UnZipFile/'+SUBSTRING(TextFile, 1, CHARINDEX('.txt', TextFile) - 1)+'/'+PictureFile[URL_FILE]
     FROM BP.CCScanDO
     WHERE DPDate BETWEEN DATEADD(month, DATEDIFF(month, 0,  GETDATE()), 0) AND GETDATE()
   `); 
