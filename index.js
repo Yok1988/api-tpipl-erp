@@ -50,14 +50,13 @@ app.get("/users", async (req, res) => {
     const result = await sql.query(`
     SELECT Userid,EMployeeid
     FROM EM.Users
-    WHERE ENTITYCODE = 'TP'
+    WHERE ENTITYCODE = 'TP' AND EMployeeid !=''
   `); 
     res.json(result.recordset);
   } catch (err) {
     res.status(500).send("❌ Error fetching data");
   }
 });
-
 
 const PORT = process.env.PORT || 4000;
 
