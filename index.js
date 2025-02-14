@@ -22,7 +22,7 @@ const config = {
 
 // เชื่อมต่อ SQL Server
 sql.connect(config)
-  .then(() => console.log("✅ Database Connected! 👍👍💖👌"))
+  .then(() => console.log("✅ Database Connected!👍👍💖👌"))
   .catch((err) => console.log("❌ Database Connection Failed:", err));
 
 // 📌 API ดึงข้อมูลจาก `CCScanDO`
@@ -81,6 +81,10 @@ console.log("🔗 Database Config:", {
   database: process.env.DB_DATABASE,
   user: process.env.DB_USER,
 }); 
+
+console.log("🌍🚀 API Postman : api-tpipl-erp.json ");
+console.log("🌍⚡ API Postman :", `http://${getLocalIP()}:${PORT}/sales-erp`);
+console.log("🌍 API Postman:", `http://${getLocalIP()}:${PORT}/sales-erp`);
 
 //app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
 // รันเซิร์ฟเวอร์
